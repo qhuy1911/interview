@@ -1,21 +1,19 @@
-import { UserModel } from '../models';
+import { UserModel } from '../models/index.js';
 
 const checkDuplicateEmail = (req, res, next) => {
   const {email} = req.body;
   UserModel.findOne({
     email: email
-  }).exec((err, user) => {
-    if (err) {
-      res.status(500).send({ message: err });
-      return;
-    }
-
+  }).then((user) => {
+    console.log('res', user)
     if (user) {
       res.status(400).send({ message: "Failed! Username is already in use!" });
       return;
     }
 
     next();
+  }).catch(error => {
+    res.status(500).send({ message: err });
   })
 }
 

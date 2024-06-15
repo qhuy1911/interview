@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import mongoose from "mongoose";
 import 'dotenv/config';
+import routes from './src/routes/index.js'
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -14,9 +15,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true })) 
 app.use(morgan('dev'));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
+app.use('/api', routes)
 
 // connect DB
 mongoose.connect(CONNECTION_STRING).then(async () => {

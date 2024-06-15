@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userSchema = mongoose.Schema(
+const userSchema = new mongoose.Schema(
   {
     email: {
       type: String,
@@ -14,7 +14,7 @@ const userSchema = mongoose.Schema(
       type: String,
       require: true,
     },
-    refferalCode: {
+    referralCode: {
       type: String,
       require: true,
     },
@@ -28,6 +28,6 @@ const userSchema = mongoose.Schema(
   },
 );
 
-const UserModel = mongoose.Model("User", userSchema);
+const UserModel = mongoose.model("User", userSchema)
 
 export default UserModel;

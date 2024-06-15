@@ -1,5 +1,5 @@
-import UserModel from "./UserModel";
-import LinkModel from "./LinkModel";
+import UserModel from "./UserModel.js";
+import LinkModel from "./LinkModel.js";
 
 export {
   UserModel,

@@ -54,6 +54,11 @@ basic-auth@~2.0.1:
   dependencies:
     safe-buffer "5.1.2"
 
+bcryptjs@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+  integrity sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==
+
 binary-extensions@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.3.0.tgz#f6e14a97858d327252200242d4ccfe522c445522"
@@ -734,6 +739,11 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+referral-codes@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/referral-codes/-/referral-codes-3.0.0.tgz#bb943dc0ae7c507ec96060db69bc30aa69aa3aa8"
+  integrity sha512-XuMWA8VvRztL6fChJCik+aDq0u7GOYwb8wWK3UeM0TeBqDbXqzM3jO1N9AZxOGnh6iEGpJXfNZAJt1sdVCi0/A==
 
 safe-buffer@5.1.2:
   version "5.1.2"

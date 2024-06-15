@@ -1,6 +1,6 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
-const LinkSchema = mongoose.Schema(
+const linkSchema = new mongoose.Schema(
   {
     link: {
       type: String,
@@ -15,7 +15,7 @@ const LinkSchema = mongoose.Schema(
       require: true,
     },
     is_deleted: {
-      type: boolean,
+      type: mongoose.Schema.Types.Boolean,
       default: false,
     },
   }, 
@@ -24,6 +24,6 @@ const LinkSchema = mongoose.Schema(
   },
 );
 
-const LinkModel = mongoose.Model("Link", LinkSchema);
+const LinkModel = mongoose.model("Link", linkSchema);
 
 export default LinkModel;
