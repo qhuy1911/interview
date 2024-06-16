@@ -1,6 +1,6 @@
 import express from "express";
-// import {authController} from "../controllers/index.js";
 import authRouter from "./authRouter.js";
+import linkRouter from "./linkRouter.js";
 
 const router = express.Router();
 
@@ -9,5 +9,6 @@ router.get('/', (req, res) => {
 });
 
 router.use('/auth', authRouter)
+router.use('/links', linkRouter)
 
-export default router
+export default router;
