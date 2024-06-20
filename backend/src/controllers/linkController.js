@@ -3,7 +3,7 @@ import { LinkModel } from "../models/index.js"
 const getLinksByLoggedInUser = (req, res) => {
   const { userId } = req;
   LinkModel
-    .find({ user_id: userId })
+    .find({ user_id: userId, is_deleted: false })
     .exec()
     .then((data) => {
       res.status(200).send({
@@ -29,7 +29,8 @@ const createLink = (req, res) => {
     .save()
     .then(() => {
       res.status(201).send({
-        message: "Link was created successfully!"
+        message: "Link was created successfully!",
+        status: 201,
       })
     })
     .catch(err => {
@@ -47,7 +48,7 @@ const deleteLink = (req, res) => {
         res.status(404).send({
           message: `Cannot update Liknk with id=${linkId}.`
         });
-      } else res.send({ message: "Link was updated successfully." });
+      } else res.send({ message: "Link was updated successfully.", status: 200 });
     })
     .catch(err => {
       res.status(500).send({

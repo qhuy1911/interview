@@ -22,7 +22,7 @@ const signup = (req, res) => {
   newUser
     .save()
     .then(() => {
-      res.status(201).send({ message: "User was registered successfully!" });
+      res.status(201).send({ message: "User was registered successfully!", status: 201 });
     })
     .catch((err) => {
       if (err) {

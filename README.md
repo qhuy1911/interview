@@ -49,3 +49,43 @@ The final delivery must be running with Docker.
 - Please complete your working solution within 3 days of receiving this challenge, and be sure to notify us with a link to your repo, when it is ready for review.
 
 **Happy coding!**
+
+## API Description
+
+| Method | Endpoint | Decription | body |
+| --- | --- | --- |--- |
+POST | /api/auth/signup | Create new account | {"email": "string","password": "string","name": "string"} |
+POST | /api/auth/signin | Signin an account | {"email": "string","password": "string"} |
+GET | /api/links/me | Get all logged in user's links | {} |
+POST | /api/links | Create a new link | {"link": "string","product_name": "string"} |
+PUT | /api/links/{id} | Delete a link by link ID | {} |
+
+## How to run locally
+
+### Backend
+Create .env file and paste the below code into file:
+```
+PORT=8080
+
+# db
+DB_USERNAME="qhuy1911"
+DB_PASSWORD="JaTwrpc316tjKqUH"
+
+SECRET_KEY="oeGpYkdhbrOtAqMauS0lIfNgWS9PIzN9"
+```
+
+Open terminal and run command: 
+```
+npm install
+npm start
+```
+
+### Frontend
+
+Open another terminal and run command: 
+```
+npm install
+npm start
+```
+
+If your backend run on the port difference 8080, in Frontend, open constants/index.js file and update to the current port.
